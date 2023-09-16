@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button effects javascript</title>
+    <link rel="stylesheet" type="text/css" href="button.css">
+</head>
+
+<body>
+    <a href=""><i></i><i></i>
+        <span>Button</span></a>
+
+</body>
+
+<script>
+
+    let btn = document.querySelector('a');
+    btn.addEventListener('mousemove', (e) => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX * 3 - rect.left;
+
+        btn.style.setProperty('--x', x + 'deg');
+    });
+</script>
+
+</html>
